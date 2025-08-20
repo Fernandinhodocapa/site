@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <style>
+        .show-pass {
+            position: relative;
+        }
+        .show-pass i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <div class="page">
@@ -16,12 +29,17 @@
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required autofocus>
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <div class="show-pass">
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <i id="togglePass">👁️</i>
+            </div>
 
             <a href="#">Esqueci minha senha</a>
 
             <input type="submit" value="Acessar" class="btn">
         </form>
     </div>
+
+    <script src="login.js"></script>
 </body>
 </html>
